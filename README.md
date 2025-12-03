@@ -1,0 +1,1 @@
+minimalis hyprland config
