@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+
+set DOTFILES_DIR ~/dotfiles
+
+# Copy the dotfiles from ~/.config to ~/dotfiles/.config
+cp -r ~/.config/hypr $DOTFILES_DIR
+cp -r ~/.config/waybar $DOTFILES_DIR
+cp -r ~/.config/wofi $DOTFILES_DIR
+cp ~/.config/starship.toml $DOTFILES_DIR
+cp -r ~/.config/wlogout $DOTFILES_DIR
+cp -r ~/.config/ghostty $DOTFILES_DIR
+
+
+echo "Dotfiles copied successfully to $DOTFILES_DIR!"
