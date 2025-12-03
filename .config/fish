@@ -1,0 +1,1 @@
+/home/nerots/.config/fish
