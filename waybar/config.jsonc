@@ -3,15 +3,22 @@
   "position": "top",
   "height": 24,
   "spacing": 5,
-
   "modules-left": [
     "hyprland/workspaces",
     "custom/platform-profile",
     "temperature",
+    "memory"
   ],
-  "modules-center": ["clock"],
-  "modules-right": ["wireplumber", "battery", "backlight", "bluetooth", "tray"],
-
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "battery",
+    "backlight",
+    "bluetooth",
+    "tray"
+  ],
   "hyprland/workspaces": {
     "format": "<span size='larger'>{icon}</span>",
     "on-click": "activate",
@@ -29,10 +36,10 @@
       "5": [],
     },
   },
-
+  "memory": {},
   "clock": {
     "interval": 60,
-    "format": "{:%d.%m.%Y | %H:%M}",
+    "format": "{:%d %B %Y | %H:%M}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
@@ -44,41 +51,54 @@
       },
     },
   },
-
   "wireplumber": {
     "format": "\udb81\udd7e {volume}%",
     "max-volume": 100,
-    "scroll-step": 5,
+    "scroll-step": 1,
   },
-
   "backlight": {
     "device": "nvidia_0",
     "format": "{icon}  ",
     "on-scroll-up": "brightnessctl s '+10%'",
     "on-scroll-down": "brightnessctl s '10%-'",
     "on-click": "((( $(brightnessctl g) == 100 )) && brightnessctl s '0') || (brightnessctl s '+10%')",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
-
   "battery": {
     "bat": "BAT0",
     "interval": 2,
-    "format": "{icon}  {capacity}%",
-    "format-icons": ["", "", "", "", ""],
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "format-charging": "󰂄 {capacity}%",
-    "format-icons-charging": ["󰂄"],
-    "format-full": "\uf240  {capacity}%",
+    "format-icons-charging": [
+      "󰂄"
+    ],
+    "format-full": "\uf240 {capacity}%",
   },
-
   "memory": {
     "interval": 30,
     "format": "\uf4bc  {used:0.1f}G",
   },
-
   "temperature": {
+    "sensor": "k10temp-pci-00c3",
     "format": "{temperatureC}°C",
   },
-
   "network": {
     "format": "",
     "format-ethernet": "\udb83\udc9d",
@@ -95,7 +115,6 @@
     "tooltip-format-ethernet": "{ifname}",
     "tooltip-format-disconnected": "Disconnected",
   },
-
   "bluetooth": {
     "format": "\udb80\udcaf",
     "format-disabled": "\udb80\udcb2",
@@ -104,16 +123,13 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
-
   "hyprland/language": {
     "format": "{short}",
   },
-
   "tray": {
     "icon-size": 16,
     "spacing": 16,
   },
-
   "custom/platform-profile": {
     "format": "{icon} ",
     "exec": "~/.config/waybar/platform_profile.sh",
@@ -126,7 +142,6 @@
       "default": "?",
     },
   },
-
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
