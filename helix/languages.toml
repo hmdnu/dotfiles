@@ -15,7 +15,6 @@ language-servers = [
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 auto-format = true
 
-
 [[language]]
 name = "css"
 language-servers = [
@@ -26,14 +25,13 @@ language-servers = [
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 auto-format = true
 
-
 [[language]]
 name = "typescript"
 language-servers = [
   "typescript-language-server",
-  "discord-rpc"  
+  "discord-rpc"
 ]
-formatter = { command = "dprint", args = [ "fmt", "--stdin", "typescript" ] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
@@ -42,12 +40,12 @@ language-servers = [
   "typescript-language-server",
   "discord-rpc"
 ]
-formatter = { command = "dprint", args = [ "fmt", "--stdin", "javascript" ] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "json"
-formatter = { command = "dprint", args = [ "fmt", "--stdin", "json" ] }
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 auto-format = true
 
 [[language]]
@@ -57,7 +55,7 @@ language-servers = [
   "tailwindcss-ls",
   "discord-rpc"
 ]
-formatter = { command = "dprint", args = [ "fmt", "--stdin", "jsx" ] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
@@ -67,9 +65,8 @@ language-servers = [
   "tailwindcss-ls",
   "discord-rpc"
 ]
-formatter = { command = "dprint", args = [ "fmt", "--stdin", "tsx" ] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
-
 
 [[language]]
 name = "svelte"
@@ -81,7 +78,7 @@ language-servers = [
 
 [[language]]
 name = "c"
-language-servers = ["discord-rpc"]
+language-servers = ["clangd", "discord-rpc"]
 formatter = { command = "clang-format" }
 auto-format = true
 

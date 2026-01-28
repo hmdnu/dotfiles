@@ -1,11 +1,13 @@
-theme = "gruvbox_original_dark_medium"
+theme = "wolf-alabaster-dark"
 
 [editor]
-shell = ['fish']
-bufferline = 'always' 
+bufferline = 'always'
+cursorline = true
+true-color = true
+color-modes = true
 
 [editor.file-picker]
-hidden = false
+hidden = true
 
 [keys.normal]
 C-y = [
@@ -15,6 +17,16 @@ C-y = [
   ':open %sh{cat /tmp/unique-file}',
   ':redraw',
 ]
+A-d = [':buffer-close']
+A-left = [':buffer-previous']
+A-right = [':buffer-next'] 
+
+[keys.insert]
+A-d = [':buffer-close']
+A-left = [':buffer-previous']
+A-right = [':buffer-next'] 
+A-backspace = 'normal_mode'
+C-backspace = 'delete_word_backward'
 
 [editor.lsp]
 auto-signature-help = false
