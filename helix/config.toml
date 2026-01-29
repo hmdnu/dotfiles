@@ -34,7 +34,8 @@ C-y = [
 A-d = [':buffer-close']
 A-left = [':buffer-previous']
 A-right = [':buffer-next'] 
-C-g = [':new', ':insert-output lazygit', ':buffer-close!', ':redraw']
+
+
 
 [keys.insert]
 A-d = [':buffer-close']
