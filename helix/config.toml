@@ -6,6 +6,20 @@ cursorline = true
 true-color = true
 color-modes = true
 
+[editor.statusline]
+left = ["mode", "file-name", "file-modification-indicator"]
+center = ["spinner"]
+right = ["diagnostics", "selections", "position", "file-encoding","version-control", "file-type"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+separator = "|"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
 [editor.file-picker]
 hidden = true
 
@@ -20,6 +34,7 @@ C-y = [
 A-d = [':buffer-close']
 A-left = [':buffer-previous']
 A-right = [':buffer-next'] 
+C-g = [':new', ':insert-output lazygit', ':buffer-close!', ':redraw']
 
 [keys.insert]
 A-d = [':buffer-close']
@@ -30,3 +45,4 @@ C-backspace = 'delete_word_backward'
 
 [editor.lsp]
 auto-signature-help = false
+display-messages = true

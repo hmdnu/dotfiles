@@ -32,7 +32,7 @@ language-servers = [
   "discord-rpc"
 ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
+# auto-format = true
 
 [[language]]
 name = "javascript"
@@ -41,7 +41,7 @@ language-servers = [
   "discord-rpc"
 ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
+# auto-format = true
 
 [[language]]
 name = "json"
@@ -66,7 +66,7 @@ language-servers = [
   "discord-rpc"
 ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
+# auto-format = true
 
 [[language]]
 name = "svelte"
@@ -91,6 +91,7 @@ auto-format = true
 [[language]]
 name = "go"
 language-servers = ["gopls", "discord-rpc"]
+auto-format = true
 
 [[language]]
 name = "python"
