@@ -3,12 +3,12 @@ minimalist hyprland config
 
 ## Software requirements
 
-- Window manager: Hyprland
+- Window manager: Niri
 - Status bar: Waybar
 - Terminal: Ghostty
-- App launcher: Wofi
+- App launcher: Fuzzel
 - File Manager: Nemo
 - Notification: Swaync
-- Wallpaper: Hyprpaper
+- Wallpaper: Swaybg
 - Logout menu: Wlogout
 - Screen lock: Hyprlock
