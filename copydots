@@ -10,5 +10,6 @@ cp ~/.config/starship.toml $DOTFILES_DIR
 cp -r ~/.config/wlogout $DOTFILES_DIR
 cp -r ~/.config/ghostty $DOTFILES_DIR
 cp -r ~/.config/helix $DOTFILES_DIR
+cp -r ~/.config/niri $DOTFILES_DIR
 
 echo "Dotfiles copied successfully to $DOTFILES_DIR!"

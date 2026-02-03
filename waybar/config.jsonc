@@ -4,7 +4,7 @@
   "height": 24,
   "spacing": 5,
   "modules-left": [
-    "hyprland/workspaces",
+    "niri/workspaces",
     "custom/platform-profile",
     "temperature",
     "memory"
@@ -19,7 +19,7 @@
     "bluetooth",
     "tray"
   ],
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "format": "<span size='larger'>{icon}</span>",
     "on-click": "activate",
     "format-icons": {
@@ -36,7 +36,6 @@
       "5": [],
     },
   },
-  "memory": {},
   "clock": {
     "interval": 60,
     "format": "{:%d %B %Y | %H:%M}",
