@@ -13,6 +13,17 @@ gestures {
     }
 }
 
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+overview {
+    workspace-shadow {
+        off
+    }
+}
+
 input {
     keyboard {
         xkb {
@@ -69,7 +80,7 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-    // warp-mouse-to-focus
+    warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
@@ -113,10 +124,16 @@ input {
     position x=1280 y=0
 }
 
+
+cursor {
+        hide-when-typing
+    }
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
+    background-color "transparent"
     // Set gaps around windows in logical pixels.
     gaps 10
 
@@ -277,6 +294,9 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-at-startup "discord"
+spawn-at-startup "swaync"
+spawn-at-startup "pritunl-client-electro"
+
 spawn-sh-at-startup "swaybg -i ~/Pictures/wallpaper/frieren-close-up.png"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -370,8 +390,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.   
-    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+Space repeat=false hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Space repeat=false { spawn "fuzzel"; }
     Mod+W hotkey-overlay-title="Run browser: Brave" { spawn "brave"; }
     Mod+E hotkey-overlay-title="Run file manager: Nemi" { spawn "nemo"; }
     
