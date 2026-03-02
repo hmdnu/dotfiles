@@ -1,4 +1,4 @@
-minimalist hyprland config
+my minimalist desktop config
 
 
 ## Software requirements
