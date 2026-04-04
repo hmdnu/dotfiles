@@ -1,10 +1,11 @@
-theme = "wolf-alabaster-dark"
+theme = "onedark"
 
 [editor]
 bufferline = 'always'
 cursorline = true
 true-color = true
 color-modes = true
+line-number = 'relative'
 
 [editor.statusline]
 left = ["mode", "file-name", "file-modification-indicator"]
@@ -33,9 +34,8 @@ C-y = [
 ]
 A-d = [':buffer-close']
 A-left = [':buffer-previous']
-A-right = [':buffer-next'] 
-
-
+A-right = [':buffer-next']
+a = ['insert_mode']
 
 [keys.insert]
 A-d = [':buffer-close']

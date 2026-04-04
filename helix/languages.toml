@@ -1,9 +1,14 @@
 [language-server.tailwindcss-ls]
-command = "tailwindcss-language-server"
+command = "tailwindcss-language-server" 
 args = ["--stdio"]
+config = { userLanguages = { templ = "html", "*.templ" = "html"} }
 
 [language-server.discord-rpc]
 command = "discord-rpc-lsp"
+
+[language-server.phpactor]
+command = "phpactor"
+args = ["language-server"]
 
 [[language]]
 name = "html"
@@ -12,8 +17,8 @@ language-servers = [
   "tailwindcss-ls",
   "discord-rpc"
 ]
-formatter = { command = 'prettier', args = ["--parser", "html"] }
-auto-format = true
+# formatter = { command = 'prettier', args = ["--parser", "html"] }
+# auto-format = true
 
 [[language]]
 name = "css"
@@ -22,8 +27,8 @@ language-servers = [
   "tailwindcss-ls",
   "discord-rpc"
 ]
-formatter = { command = 'prettier', args = ["--parser", "css"] }
-auto-format = true
+# formatter = { command = 'prettier', args = ["--parser", "css"] }
+# auto-format = true
 
 [[language]]
 name = "typescript"
@@ -32,7 +37,7 @@ language-servers = [
   "discord-rpc"
 ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-# auto-format = true
+auto-format = true
 
 [[language]]
 name = "javascript"
@@ -66,7 +71,7 @@ language-servers = [
   "discord-rpc"
 ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-# auto-format = true
+auto-format = true
 
 [[language]]
 name = "svelte"
@@ -75,6 +80,7 @@ language-servers = [
   "tailwindcss-ls",
   "discord-rpc"
 ]
+auto-format = true
 
 [[language]]
 name = "c"
@@ -96,3 +102,27 @@ auto-format = true
 [[language]]
 name = "python"
 language-servers = ["pyright", "discord-rpc"]
+
+[[language]]
+name = "php"
+language-servers = ["phpactor",  "vscode-html-language-server"]
+formatter = { command = "php-cs-fixer", args = ["fix", "--quiet", "--using-cache=no"] }
+auto-format = false
+
+[[language]]
+name = "c-sharp"
+formatter = { command = "dotnet", args = ["format", "--stdin"] }
+
+[[language]]
+name = "java"
+formatter = { command = "google-java-format" }
+
+[[language]]
+name = "astro"
+formatter = { command = "prettier", args = ["--parser", "astro"] }
+language-servers = ["astro-ls", "discord-rpc"]
+
+[[language]]
+name = "templ"
+language-servers = ["templ", "discord-rpc", "tailwindcss-ls"]
+auto-format = true
