@@ -15,5 +15,6 @@ cp -r ~/.config/tmux $DOTFILES_DIR
 cp -r ~/.config/fuzzel $DOTFILES_DIR
 cp -r ~/.config/kitty $DOTFILES_DIR
 cp -r ~/.config/mako $DOTFILES_DIR
+cp -r ~/Pictures/wallpaper $DOTFILES_DIR
 
 echo "Dotfiles copied successfully to $DOTFILES_DIR!"
