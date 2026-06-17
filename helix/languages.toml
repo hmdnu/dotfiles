@@ -105,7 +105,7 @@ language-servers = ["pyright", "discord-rpc"]
 
 [[language]]
 name = "php"
-language-servers = ["phpactor",  "vscode-html-language-server"]
+language-servers = ["phpactor",  "vscode-html-language-server", "discord-rpc"]
 formatter = { command = "php-cs-fixer", args = ["fix", "--quiet", "--using-cache=no"] }
 auto-format = false
 

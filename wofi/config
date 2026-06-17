@@ -1,9 +1,0 @@
-mode=drun,run
-term=ghossty
-hide_scroll=true
-insensitive=true
-height=45%
-width=45%
-prompt=Search...
-allow_markup=true
-columns=1

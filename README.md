@@ -1,14 +1,14 @@
 my minimalist desktop config
 
-
 ## Software requirements
 
 - Window manager: Niri
 - Status bar: Waybar
-- Terminal: Ghostty
+- Terminal: Kitty
 - App launcher: Fuzzel
 - File Manager: Nemo
-- Notification: Swaync
-- Wallpaper: Swaybg
+- Notification: Mako
+- Wallpaper: awww
 - Logout menu: Wlogout
 - Screen lock: Hyprlock
+- Font: Iosevka Term Nerd
