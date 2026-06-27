@@ -14,7 +14,7 @@
 #
 # Additionally, each config option is also explained in detail
 # on Ghostty's website, at https://ghostty.org/docs/config.
-command = /bin/fish -lc "tmux attach || tmux new"
+# command = /bin/fish -lc "tmux attach || tmux new"
 # Config syntax crash course
 # ==========================
 # # The config file consists of simple key-value pairs,
