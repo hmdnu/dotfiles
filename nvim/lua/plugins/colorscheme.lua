@@ -17,8 +17,11 @@ local function blend(fg, bg, alpha)
   )
 end
 
-local function diff_overrides(c)
+local function overrides(c)
   return {
+    -- dracula-soft's `selection` (#7C7F8A) is a bright grey; use a subtle
+    -- tint of fg over bg instead so the cursorline stays dark.
+    CursorLine = { bg = blend(c.fg, c.bg, 0.08) },
     DiffAdd = { bg = blend(c.green, c.bg, 0.18) },
     DiffChange = { bg = blend(c.orange, c.bg, 0.18) },
     DiffDelete = { bg = blend(c.red, c.bg, 0.18) },
@@ -31,7 +34,7 @@ end
 return {
   {
     "Mofiqul/dracula.nvim",
-    opts = { overrides = diff_overrides },
+    opts = { overrides = overrides },
     config = function(_, opts)
       require("dracula").setup(opts)
       -- Re-apply when LazyVim already set the colorscheme before this config.
